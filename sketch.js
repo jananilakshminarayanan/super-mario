@@ -138,12 +138,10 @@ function draw() {
       mario.visble = false;   
       lives = lives -1;
       enemygroup[0].destroy();
-      console.log(1);
       mario.tint = 126;
       setTimeout(function blink(){
         mario.tint = 255;
-        console.log(2);
-      }, 500)
+      }, 750)
       
       }  
     
