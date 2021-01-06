@@ -141,7 +141,7 @@ function draw() {
       mario.tint = 126;
       setTimeout(function blink(){
         mario.tint = 255;
-      }, 1000)
+      }, 600)
       
       }  
     
