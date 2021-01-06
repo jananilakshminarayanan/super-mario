@@ -141,7 +141,7 @@ function draw() {
       mario.tint = 126;
       setTimeout(function blink(){
         mario.tint = 255;
-      }, 600)
+      }, 500)
       
       }  
     
@@ -177,6 +177,7 @@ function draw() {
     gos.visible = true;
     rss.visible = true;
     pl.visible = false;
+    mario.visible = false;
     
     
 
