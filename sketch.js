@@ -125,6 +125,7 @@ function draw() {
       scoresn.play();
       mushgroup[0].destroy();
       score = score + 1;
+      
       }
     
       spawnmush();
@@ -132,11 +133,20 @@ function draw() {
   
       if(enemygroup.isTouching(mario)){
       scoresn.play();
-      mario.visible = false;
+      mario.changeAnimation("standing",mario_standing);
       mario.scale = 0.75;
+      mario.visble = false;   
       lives = lives -1;
       enemygroup[0].destroy();
+      console.log(1);
+      mario.tint = 126;
+      setTimeout(function blink(){
+        mario.tint = 255;
+        console.log(2);
+      }, 500)
+      
       }  
+    
     
     if(lives <= 0 ){     
         mariosn.stop();
@@ -159,7 +169,6 @@ function draw() {
   }
   
   if(gameState === OVER){
-    mario.changeAnimation("standing",mario_standing);
     ingnd.velocityX = 0;
     mario.velocityY = 0;
     bg1.velocityX = 0;
